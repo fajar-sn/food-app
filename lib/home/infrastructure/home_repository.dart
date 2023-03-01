@@ -6,7 +6,10 @@ import 'package:food_app/core/infrastructure/core_repository.dart';
 import 'package:food_app/home/domain/i_home_repository.dart';
 import 'package:food_app/home/domain/model/models.dart';
 import 'package:food_app/home/infrastructure/data_transfer_object/food_category/food_category_dto.dart';
+import 'package:injectable/injectable.dart';
 
+@Injectable(as: IHomeRepository)
+@lazySingleton
 class HomeRepository extends CoreRepository implements IHomeRepository {
   @override
   Future<Either<ApiFailure, FoodCategory>> get categories async {

@@ -18,7 +18,11 @@ class DetailRepository extends CoreRepository implements IDetailRepository {
           await get(endPoint: "lookup.php", queryParameters: {"i": id});
 
       final responseMap = jsonDecode(responseString) as Map<String, dynamic>;
-      return right(FoodDetailDto.fromJson(responseMap).toDomain());
+      final meals = responseMap["meals"] as List<dynamic>;
+      
+      return right(
+        FoodDetailDto.fromJson(meals[0] as Map<String, dynamic>).toDomain(),
+      );
     } catch (error, stackTrace) {
       return catchError(error, stackTrace);
     }

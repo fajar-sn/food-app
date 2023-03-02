@@ -16,11 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$FoodDetail {
-  String get category => throw _privateConstructorUsedError;
-  String get area => throw _privateConstructorUsedError;
-  String get instructions => throw _privateConstructorUsedError;
-  String get tags => throw _privateConstructorUsedError;
-  String get youtubeUrl => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
+  String? get area => throw _privateConstructorUsedError;
+  String? get instructions => throw _privateConstructorUsedError;
+  String? get tags => throw _privateConstructorUsedError;
+  String? get youtubeUrl => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FoodDetailCopyWith<FoodDetail> get copyWith =>
@@ -34,11 +34,11 @@ abstract class $FoodDetailCopyWith<$Res> {
       _$FoodDetailCopyWithImpl<$Res, FoodDetail>;
   @useResult
   $Res call(
-      {String category,
-      String area,
-      String instructions,
-      String tags,
-      String youtubeUrl});
+      {String? category,
+      String? area,
+      String? instructions,
+      String? tags,
+      String? youtubeUrl});
 }
 
 /// @nodoc
@@ -54,33 +54,33 @@ class _$FoodDetailCopyWithImpl<$Res, $Val extends FoodDetail>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? category = null,
-    Object? area = null,
-    Object? instructions = null,
-    Object? tags = null,
-    Object? youtubeUrl = null,
+    Object? category = freezed,
+    Object? area = freezed,
+    Object? instructions = freezed,
+    Object? tags = freezed,
+    Object? youtubeUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      area: null == area
+              as String?,
+      area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as String,
-      instructions: null == instructions
+              as String?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      youtubeUrl: null == youtubeUrl
+              as String?,
+      youtubeUrl: freezed == youtubeUrl
           ? _value.youtubeUrl
           : youtubeUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -94,11 +94,11 @@ abstract class _$$_FoodDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String category,
-      String area,
-      String instructions,
-      String tags,
-      String youtubeUrl});
+      {String? category,
+      String? area,
+      String? instructions,
+      String? tags,
+      String? youtubeUrl});
 }
 
 /// @nodoc
@@ -112,33 +112,33 @@ class __$$_FoodDetailCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? category = null,
-    Object? area = null,
-    Object? instructions = null,
-    Object? tags = null,
-    Object? youtubeUrl = null,
+    Object? category = freezed,
+    Object? area = freezed,
+    Object? instructions = freezed,
+    Object? tags = freezed,
+    Object? youtubeUrl = freezed,
   }) {
     return _then(_$_FoodDetail(
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      area: null == area
+              as String?,
+      area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as String,
-      instructions: null == instructions
+              as String?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      youtubeUrl: null == youtubeUrl
+              as String?,
+      youtubeUrl: freezed == youtubeUrl
           ? _value.youtubeUrl
           : youtubeUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -155,15 +155,15 @@ class _$_FoodDetail extends _FoodDetail {
       : super._();
 
   @override
-  final String category;
+  final String? category;
   @override
-  final String area;
+  final String? area;
   @override
-  final String instructions;
+  final String? instructions;
   @override
-  final String tags;
+  final String? tags;
   @override
-  final String youtubeUrl;
+  final String? youtubeUrl;
 
   @override
   String toString() {
@@ -198,23 +198,23 @@ class _$_FoodDetail extends _FoodDetail {
 
 abstract class _FoodDetail extends FoodDetail {
   const factory _FoodDetail(
-      {required final String category,
-      required final String area,
-      required final String instructions,
-      required final String tags,
-      required final String youtubeUrl}) = _$_FoodDetail;
+      {required final String? category,
+      required final String? area,
+      required final String? instructions,
+      required final String? tags,
+      required final String? youtubeUrl}) = _$_FoodDetail;
   const _FoodDetail._() : super._();
 
   @override
-  String get category;
+  String? get category;
   @override
-  String get area;
+  String? get area;
   @override
-  String get instructions;
+  String? get instructions;
   @override
-  String get tags;
+  String? get tags;
   @override
-  String get youtubeUrl;
+  String? get youtubeUrl;
   @override
   @JsonKey(ignore: true)
   _$$_FoodDetailCopyWith<_$_FoodDetail> get copyWith =>

@@ -9,11 +9,11 @@ class FoodDetailDto with _$FoodDetailDto {
   const FoodDetailDto._();
 
   const factory FoodDetailDto({
-    @JsonKey(name: "strCategory") required String category,
-    @JsonKey(name: "strArea") required String area,
-    @JsonKey(name: "strInstructions") required String instructions,
-    @JsonKey(name: "strTags") required String tags,
-    @JsonKey(name: "strYoutube") required String youtubeUrl,
+    @JsonKey(name: "strCategory") required String? category,
+    @JsonKey(name: "strArea") required String? area,
+    @JsonKey(name: "strInstructions") required String? instructions,
+    @JsonKey(name: "strTags") required String? tags,
+    @JsonKey(name: "strYoutube") required String? youtubeUrl,
   }) = _FoodDetailDto;
 
   factory FoodDetailDto.fromJson(Map<String, dynamic> json) =>

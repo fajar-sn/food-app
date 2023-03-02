@@ -21,15 +21,15 @@ FoodDetailDto _$FoodDetailDtoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FoodDetailDto {
   @JsonKey(name: "strCategory")
-  String get category => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
   @JsonKey(name: "strArea")
-  String get area => throw _privateConstructorUsedError;
+  String? get area => throw _privateConstructorUsedError;
   @JsonKey(name: "strInstructions")
-  String get instructions => throw _privateConstructorUsedError;
+  String? get instructions => throw _privateConstructorUsedError;
   @JsonKey(name: "strTags")
-  String get tags => throw _privateConstructorUsedError;
+  String? get tags => throw _privateConstructorUsedError;
   @JsonKey(name: "strYoutube")
-  String get youtubeUrl => throw _privateConstructorUsedError;
+  String? get youtubeUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,11 +44,11 @@ abstract class $FoodDetailDtoCopyWith<$Res> {
       _$FoodDetailDtoCopyWithImpl<$Res, FoodDetailDto>;
   @useResult
   $Res call(
-      {@JsonKey(name: "strCategory") String category,
-      @JsonKey(name: "strArea") String area,
-      @JsonKey(name: "strInstructions") String instructions,
-      @JsonKey(name: "strTags") String tags,
-      @JsonKey(name: "strYoutube") String youtubeUrl});
+      {@JsonKey(name: "strCategory") String? category,
+      @JsonKey(name: "strArea") String? area,
+      @JsonKey(name: "strInstructions") String? instructions,
+      @JsonKey(name: "strTags") String? tags,
+      @JsonKey(name: "strYoutube") String? youtubeUrl});
 }
 
 /// @nodoc
@@ -64,33 +64,33 @@ class _$FoodDetailDtoCopyWithImpl<$Res, $Val extends FoodDetailDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? category = null,
-    Object? area = null,
-    Object? instructions = null,
-    Object? tags = null,
-    Object? youtubeUrl = null,
+    Object? category = freezed,
+    Object? area = freezed,
+    Object? instructions = freezed,
+    Object? tags = freezed,
+    Object? youtubeUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      area: null == area
+              as String?,
+      area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as String,
-      instructions: null == instructions
+              as String?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      youtubeUrl: null == youtubeUrl
+              as String?,
+      youtubeUrl: freezed == youtubeUrl
           ? _value.youtubeUrl
           : youtubeUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -104,11 +104,11 @@ abstract class _$$_FoodDetailDtoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "strCategory") String category,
-      @JsonKey(name: "strArea") String area,
-      @JsonKey(name: "strInstructions") String instructions,
-      @JsonKey(name: "strTags") String tags,
-      @JsonKey(name: "strYoutube") String youtubeUrl});
+      {@JsonKey(name: "strCategory") String? category,
+      @JsonKey(name: "strArea") String? area,
+      @JsonKey(name: "strInstructions") String? instructions,
+      @JsonKey(name: "strTags") String? tags,
+      @JsonKey(name: "strYoutube") String? youtubeUrl});
 }
 
 /// @nodoc
@@ -122,33 +122,33 @@ class __$$_FoodDetailDtoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? category = null,
-    Object? area = null,
-    Object? instructions = null,
-    Object? tags = null,
-    Object? youtubeUrl = null,
+    Object? category = freezed,
+    Object? area = freezed,
+    Object? instructions = freezed,
+    Object? tags = freezed,
+    Object? youtubeUrl = freezed,
   }) {
     return _then(_$_FoodDetailDto(
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      area: null == area
+              as String?,
+      area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as String,
-      instructions: null == instructions
+              as String?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      youtubeUrl: null == youtubeUrl
+              as String?,
+      youtubeUrl: freezed == youtubeUrl
           ? _value.youtubeUrl
           : youtubeUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -169,19 +169,19 @@ class _$_FoodDetailDto extends _FoodDetailDto {
 
   @override
   @JsonKey(name: "strCategory")
-  final String category;
+  final String? category;
   @override
   @JsonKey(name: "strArea")
-  final String area;
+  final String? area;
   @override
   @JsonKey(name: "strInstructions")
-  final String instructions;
+  final String? instructions;
   @override
   @JsonKey(name: "strTags")
-  final String tags;
+  final String? tags;
   @override
   @JsonKey(name: "strYoutube")
-  final String youtubeUrl;
+  final String? youtubeUrl;
 
   @override
   String toString() {
@@ -224,11 +224,11 @@ class _$_FoodDetailDto extends _FoodDetailDto {
 
 abstract class _FoodDetailDto extends FoodDetailDto {
   const factory _FoodDetailDto(
-          {@JsonKey(name: "strCategory") required final String category,
-          @JsonKey(name: "strArea") required final String area,
-          @JsonKey(name: "strInstructions") required final String instructions,
-          @JsonKey(name: "strTags") required final String tags,
-          @JsonKey(name: "strYoutube") required final String youtubeUrl}) =
+          {@JsonKey(name: "strCategory") required final String? category,
+          @JsonKey(name: "strArea") required final String? area,
+          @JsonKey(name: "strInstructions") required final String? instructions,
+          @JsonKey(name: "strTags") required final String? tags,
+          @JsonKey(name: "strYoutube") required final String? youtubeUrl}) =
       _$_FoodDetailDto;
   const _FoodDetailDto._() : super._();
 
@@ -237,19 +237,19 @@ abstract class _FoodDetailDto extends FoodDetailDto {
 
   @override
   @JsonKey(name: "strCategory")
-  String get category;
+  String? get category;
   @override
   @JsonKey(name: "strArea")
-  String get area;
+  String? get area;
   @override
   @JsonKey(name: "strInstructions")
-  String get instructions;
+  String? get instructions;
   @override
   @JsonKey(name: "strTags")
-  String get tags;
+  String? get tags;
   @override
   @JsonKey(name: "strYoutube")
-  String get youtubeUrl;
+  String? get youtubeUrl;
   @override
   @JsonKey(ignore: true)
   _$$_FoodDetailDtoCopyWith<_$_FoodDetailDto> get copyWith =>

@@ -4,4 +4,6 @@ import 'package:food_app/home/domain/model/models.dart';
 
 abstract class IHomeRepository {
   Future<Either<ApiFailure, FoodCategory>> get categories;
+
+  Future<Either<ApiFailure, FoodList>> getFoodList(String category);
 }

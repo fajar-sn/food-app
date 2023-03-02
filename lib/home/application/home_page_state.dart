@@ -4,8 +4,10 @@ part of 'home_page_bloc.dart';
 class HomePageState with _$HomePageState {
   const factory HomePageState({
     required bool isGetCategoriesLoading,
+    required bool isGetFoodListLoading,
     required ApiFailure? failure,
     required List<String> categories,
+    required List<FoodListItem> foods,
     required String selectedCategory,
   }) = _HomePageState;
 
@@ -15,6 +17,8 @@ class HomePageState with _$HomePageState {
       failure: null,
       categories: [],
       selectedCategory: "",
+      isGetFoodListLoading: false,
+      foods: [],
     );
   }
 }

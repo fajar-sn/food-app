@@ -20,18 +20,21 @@ mixin _$HomePageEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() getCategoriesStarted,
     required TResult Function(String category) setCategory,
+    required TResult Function() getFoodListStarted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategoriesStarted,
     TResult? Function(String category)? setCategory,
+    TResult? Function()? getFoodListStarted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategoriesStarted,
     TResult Function(String category)? setCategory,
+    TResult Function()? getFoodListStarted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$HomePageEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
     required TResult Function(_SetCategory value) setCategory,
+    required TResult Function(_GetFoodListStarted value) getFoodListStarted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult? Function(_SetCategory value)? setCategory,
+    TResult? Function(_GetFoodListStarted value)? getFoodListStarted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult Function(_SetCategory value)? setCategory,
+    TResult Function(_GetFoodListStarted value)? getFoodListStarted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +120,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult when<TResult extends Object?>({
     required TResult Function() getCategoriesStarted,
     required TResult Function(String category) setCategory,
+    required TResult Function() getFoodListStarted,
   }) {
     return getCategoriesStarted();
   }
@@ -123,6 +130,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategoriesStarted,
     TResult? Function(String category)? setCategory,
+    TResult? Function()? getFoodListStarted,
   }) {
     return getCategoriesStarted?.call();
   }
@@ -132,6 +140,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategoriesStarted,
     TResult Function(String category)? setCategory,
+    TResult Function()? getFoodListStarted,
     required TResult orElse(),
   }) {
     if (getCategoriesStarted != null) {
@@ -145,6 +154,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
     required TResult Function(_SetCategory value) setCategory,
+    required TResult Function(_GetFoodListStarted value) getFoodListStarted,
   }) {
     return getCategoriesStarted(this);
   }
@@ -154,6 +164,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult? Function(_SetCategory value)? setCategory,
+    TResult? Function(_GetFoodListStarted value)? getFoodListStarted,
   }) {
     return getCategoriesStarted?.call(this);
   }
@@ -163,6 +174,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult Function(_SetCategory value)? setCategory,
+    TResult Function(_GetFoodListStarted value)? getFoodListStarted,
     required TResult orElse(),
   }) {
     if (getCategoriesStarted != null) {
@@ -243,6 +255,7 @@ class _$_SetCategory implements _SetCategory {
   TResult when<TResult extends Object?>({
     required TResult Function() getCategoriesStarted,
     required TResult Function(String category) setCategory,
+    required TResult Function() getFoodListStarted,
   }) {
     return setCategory(category);
   }
@@ -252,6 +265,7 @@ class _$_SetCategory implements _SetCategory {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategoriesStarted,
     TResult? Function(String category)? setCategory,
+    TResult? Function()? getFoodListStarted,
   }) {
     return setCategory?.call(category);
   }
@@ -261,6 +275,7 @@ class _$_SetCategory implements _SetCategory {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategoriesStarted,
     TResult Function(String category)? setCategory,
+    TResult Function()? getFoodListStarted,
     required TResult orElse(),
   }) {
     if (setCategory != null) {
@@ -274,6 +289,7 @@ class _$_SetCategory implements _SetCategory {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
     required TResult Function(_SetCategory value) setCategory,
+    required TResult Function(_GetFoodListStarted value) getFoodListStarted,
   }) {
     return setCategory(this);
   }
@@ -283,6 +299,7 @@ class _$_SetCategory implements _SetCategory {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult? Function(_SetCategory value)? setCategory,
+    TResult? Function(_GetFoodListStarted value)? getFoodListStarted,
   }) {
     return setCategory?.call(this);
   }
@@ -292,6 +309,7 @@ class _$_SetCategory implements _SetCategory {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
     TResult Function(_SetCategory value)? setCategory,
+    TResult Function(_GetFoodListStarted value)? getFoodListStarted,
     required TResult orElse(),
   }) {
     if (setCategory != null) {
@@ -311,10 +329,120 @@ abstract class _SetCategory implements HomePageEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetFoodListStartedCopyWith<$Res> {
+  factory _$$_GetFoodListStartedCopyWith(_$_GetFoodListStarted value,
+          $Res Function(_$_GetFoodListStarted) then) =
+      __$$_GetFoodListStartedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetFoodListStartedCopyWithImpl<$Res>
+    extends _$HomePageEventCopyWithImpl<$Res, _$_GetFoodListStarted>
+    implements _$$_GetFoodListStartedCopyWith<$Res> {
+  __$$_GetFoodListStartedCopyWithImpl(
+      _$_GetFoodListStarted _value, $Res Function(_$_GetFoodListStarted) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetFoodListStarted implements _GetFoodListStarted {
+  const _$_GetFoodListStarted();
+
+  @override
+  String toString() {
+    return 'HomePageEvent.getFoodListStarted()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetFoodListStarted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getCategoriesStarted,
+    required TResult Function(String category) setCategory,
+    required TResult Function() getFoodListStarted,
+  }) {
+    return getFoodListStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getCategoriesStarted,
+    TResult? Function(String category)? setCategory,
+    TResult? Function()? getFoodListStarted,
+  }) {
+    return getFoodListStarted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getCategoriesStarted,
+    TResult Function(String category)? setCategory,
+    TResult Function()? getFoodListStarted,
+    required TResult orElse(),
+  }) {
+    if (getFoodListStarted != null) {
+      return getFoodListStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
+    required TResult Function(_SetCategory value) setCategory,
+    required TResult Function(_GetFoodListStarted value) getFoodListStarted,
+  }) {
+    return getFoodListStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult? Function(_SetCategory value)? setCategory,
+    TResult? Function(_GetFoodListStarted value)? getFoodListStarted,
+  }) {
+    return getFoodListStarted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult Function(_SetCategory value)? setCategory,
+    TResult Function(_GetFoodListStarted value)? getFoodListStarted,
+    required TResult orElse(),
+  }) {
+    if (getFoodListStarted != null) {
+      return getFoodListStarted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetFoodListStarted implements HomePageEvent {
+  const factory _GetFoodListStarted() = _$_GetFoodListStarted;
+}
+
+/// @nodoc
 mixin _$HomePageState {
   bool get isGetCategoriesLoading => throw _privateConstructorUsedError;
+  bool get isGetFoodListLoading => throw _privateConstructorUsedError;
   ApiFailure? get failure => throw _privateConstructorUsedError;
   List<String> get categories => throw _privateConstructorUsedError;
+  List<FoodListItem> get foods => throw _privateConstructorUsedError;
   String get selectedCategory => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -330,8 +458,10 @@ abstract class $HomePageStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isGetCategoriesLoading,
+      bool isGetFoodListLoading,
       ApiFailure? failure,
       List<String> categories,
+      List<FoodListItem> foods,
       String selectedCategory});
 
   $ApiFailureCopyWith<$Res>? get failure;
@@ -351,14 +481,20 @@ class _$HomePageStateCopyWithImpl<$Res, $Val extends HomePageState>
   @override
   $Res call({
     Object? isGetCategoriesLoading = null,
+    Object? isGetFoodListLoading = null,
     Object? failure = freezed,
     Object? categories = null,
+    Object? foods = null,
     Object? selectedCategory = null,
   }) {
     return _then(_value.copyWith(
       isGetCategoriesLoading: null == isGetCategoriesLoading
           ? _value.isGetCategoriesLoading
           : isGetCategoriesLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGetFoodListLoading: null == isGetFoodListLoading
+          ? _value.isGetFoodListLoading
+          : isGetFoodListLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       failure: freezed == failure
           ? _value.failure
@@ -368,6 +504,10 @@ class _$HomePageStateCopyWithImpl<$Res, $Val extends HomePageState>
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      foods: null == foods
+          ? _value.foods
+          : foods // ignore: cast_nullable_to_non_nullable
+              as List<FoodListItem>,
       selectedCategory: null == selectedCategory
           ? _value.selectedCategory
           : selectedCategory // ignore: cast_nullable_to_non_nullable
@@ -398,8 +538,10 @@ abstract class _$$_HomePageStateCopyWith<$Res>
   @useResult
   $Res call(
       {bool isGetCategoriesLoading,
+      bool isGetFoodListLoading,
       ApiFailure? failure,
       List<String> categories,
+      List<FoodListItem> foods,
       String selectedCategory});
 
   @override
@@ -418,14 +560,20 @@ class __$$_HomePageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isGetCategoriesLoading = null,
+    Object? isGetFoodListLoading = null,
     Object? failure = freezed,
     Object? categories = null,
+    Object? foods = null,
     Object? selectedCategory = null,
   }) {
     return _then(_$_HomePageState(
       isGetCategoriesLoading: null == isGetCategoriesLoading
           ? _value.isGetCategoriesLoading
           : isGetCategoriesLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGetFoodListLoading: null == isGetFoodListLoading
+          ? _value.isGetFoodListLoading
+          : isGetFoodListLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       failure: freezed == failure
           ? _value.failure
@@ -435,6 +583,10 @@ class __$$_HomePageStateCopyWithImpl<$Res>
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      foods: null == foods
+          ? _value._foods
+          : foods // ignore: cast_nullable_to_non_nullable
+              as List<FoodListItem>,
       selectedCategory: null == selectedCategory
           ? _value.selectedCategory
           : selectedCategory // ignore: cast_nullable_to_non_nullable
@@ -448,13 +600,18 @@ class __$$_HomePageStateCopyWithImpl<$Res>
 class _$_HomePageState implements _HomePageState {
   const _$_HomePageState(
       {required this.isGetCategoriesLoading,
+      required this.isGetFoodListLoading,
       required this.failure,
       required final List<String> categories,
+      required final List<FoodListItem> foods,
       required this.selectedCategory})
-      : _categories = categories;
+      : _categories = categories,
+        _foods = foods;
 
   @override
   final bool isGetCategoriesLoading;
+  @override
+  final bool isGetFoodListLoading;
   @override
   final ApiFailure? failure;
   final List<String> _categories;
@@ -465,12 +622,20 @@ class _$_HomePageState implements _HomePageState {
     return EqualUnmodifiableListView(_categories);
   }
 
+  final List<FoodListItem> _foods;
+  @override
+  List<FoodListItem> get foods {
+    if (_foods is EqualUnmodifiableListView) return _foods;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foods);
+  }
+
   @override
   final String selectedCategory;
 
   @override
   String toString() {
-    return 'HomePageState(isGetCategoriesLoading: $isGetCategoriesLoading, failure: $failure, categories: $categories, selectedCategory: $selectedCategory)';
+    return 'HomePageState(isGetCategoriesLoading: $isGetCategoriesLoading, isGetFoodListLoading: $isGetFoodListLoading, failure: $failure, categories: $categories, foods: $foods, selectedCategory: $selectedCategory)';
   }
 
   @override
@@ -480,16 +645,25 @@ class _$_HomePageState implements _HomePageState {
             other is _$_HomePageState &&
             (identical(other.isGetCategoriesLoading, isGetCategoriesLoading) ||
                 other.isGetCategoriesLoading == isGetCategoriesLoading) &&
+            (identical(other.isGetFoodListLoading, isGetFoodListLoading) ||
+                other.isGetFoodListLoading == isGetFoodListLoading) &&
             (identical(other.failure, failure) || other.failure == failure) &&
             const DeepCollectionEquality()
                 .equals(other._categories, _categories) &&
+            const DeepCollectionEquality().equals(other._foods, _foods) &&
             (identical(other.selectedCategory, selectedCategory) ||
                 other.selectedCategory == selectedCategory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isGetCategoriesLoading, failure,
-      const DeepCollectionEquality().hash(_categories), selectedCategory);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isGetCategoriesLoading,
+      isGetFoodListLoading,
+      failure,
+      const DeepCollectionEquality().hash(_categories),
+      const DeepCollectionEquality().hash(_foods),
+      selectedCategory);
 
   @JsonKey(ignore: true)
   @override
@@ -501,16 +675,22 @@ class _$_HomePageState implements _HomePageState {
 abstract class _HomePageState implements HomePageState {
   const factory _HomePageState(
       {required final bool isGetCategoriesLoading,
+      required final bool isGetFoodListLoading,
       required final ApiFailure? failure,
       required final List<String> categories,
+      required final List<FoodListItem> foods,
       required final String selectedCategory}) = _$_HomePageState;
 
   @override
   bool get isGetCategoriesLoading;
   @override
+  bool get isGetFoodListLoading;
+  @override
   ApiFailure? get failure;
   @override
   List<String> get categories;
+  @override
+  List<FoodListItem> get foods;
   @override
   String get selectedCategory;
   @override

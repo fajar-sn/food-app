@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:food_app/core/domain/failures/failures.dart';
 import 'package:food_app/home/domain/i_home_repository.dart';
+import 'package:food_app/home/domain/model/models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -17,6 +18,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   HomePageBloc(this._repository) : super(HomePageState.initial()) {
     on<_GetCategoriesStarted>(_getCategories);
     on<_SetCategory>(_setCategory);
+    on<_GetFoodListStarted>(_getFoodList);
   }
 
   FutureOr<void> _getCategories(
@@ -44,9 +46,33 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     );
 
     emit(state.copyWith(isGetCategoriesLoading: false));
+    add(const _GetFoodListStarted());
   }
 
   void _setCategory(_SetCategory event, Emitter<HomePageState> emit) {
     emit(state.copyWith(selectedCategory: event.category));
+  }
+
+  FutureOr<void> _getFoodList(
+    _GetFoodListStarted event,
+    Emitter<HomePageState> emit,
+  ) async {
+    emit(
+      state.copyWith(
+        isGetFoodListLoading: true,
+        failure: null,
+        foods: [],
+      ),
+    );
+
+    final eitherFailureOrData =
+        await _repository.getFoodList(state.selectedCategory);
+
+    eitherFailureOrData.fold(
+      (failure) => emit(state.copyWith(failure: failure)),
+      (data) => emit(state.copyWith(foods: data.values)),
+    );
+
+    emit(state.copyWith(isGetFoodListLoading: false));
   }
 }

@@ -12,11 +12,14 @@ class CoreRepository extends ICoreRepository {
       baseUrl: dotenv.env['BASE_URL'] ?? '',
       connectTimeout: const Duration(minutes: 1),
       receiveTimeout: const Duration(minutes: 1),
+      responseType: ResponseType.plain,
     ),
   );
 
   @override
   Either<ApiFailure, R> catchError<L, R>(Object error, StackTrace stackTrace) {
+    debugPrint("$error");
+    debugPrint("$stackTrace");
     if (error is! AppException) {
       return left(const ApiFailure.unexpected());
     }

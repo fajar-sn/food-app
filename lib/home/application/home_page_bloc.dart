@@ -46,7 +46,10 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     );
 
     emit(state.copyWith(isGetCategoriesLoading: false));
-    add(const _GetFoodListStarted());
+
+    if (state.failure == null) {
+      add(const _GetFoodListStarted());
+    }
   }
 
   void _setCategory(_SetCategory event, Emitter<HomePageState> emit) {

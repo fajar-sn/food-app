@@ -16,8 +16,14 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(_foodListItem?.name ?? "")),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        title: Text(_foodListItem?.name ?? ""),
+        elevation: 0,
+        backgroundColor: const Color(0x44000000),
+      ),
       body: ListView(
+        padding: EdgeInsets.zero,
         children: [
           CachedNetworkImage(
             imageUrl: _foodListItem?.imageUrl ?? "",
@@ -41,13 +47,29 @@ class DetailPage extends StatelessWidget {
 
   Widget _buildDetailPage(BuildContext context, DetailPageState state) {
     if (state.isLoading) {
-      return const Center(child: CircularProgressIndicator());
+      return const Padding(
+        padding: EdgeInsets.only(top: 16),
+        child: Center(child: CircularProgressIndicator()),
+      );
     }
 
     if (state.failure != null) {
       return CustomErrorWidget(failure: state.failure);
     }
 
-    return Text(state.foodDetail.instructions ?? "");
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Instrcutions",
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const SizedBox(height: 8),
+          Text(state.foodDetail.instructions ?? ""),
+        ],
+      ),
+    );
   }
 }

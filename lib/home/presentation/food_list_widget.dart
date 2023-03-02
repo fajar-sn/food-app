@@ -23,8 +23,11 @@ class _FoodListWidget extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
             child: InkWell(
-              onTap: () => Navigator.pushNamed(context, DetailPage.routeName,
-                  arguments: food),
+              onTap: () => Navigator.pushNamed(
+                context,
+                DetailPage.routeName,
+                arguments: food,
+              ),
               borderRadius: BorderRadius.circular(6),
               child: Column(
                 children: [

@@ -16,6 +16,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
 
   HomePageBloc(this._repository) : super(HomePageState.initial()) {
     on<_GetCategoriesStarted>(_getCategories);
+    on<_SetCategory>(_setCategory);
   }
 
   FutureOr<void> _getCategories(
@@ -34,9 +35,18 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
 
     eitherFailureOrData.fold(
       (failure) => emit(state.copyWith(failure: failure)),
-      (data) => emit(state.copyWith(categories: data.values)),
+      (data) => emit(
+        state.copyWith(
+          categories: data.values,
+          selectedCategory: data.values[0],
+        ),
+      ),
     );
 
     emit(state.copyWith(isGetCategoriesLoading: false));
+  }
+
+  void _setCategory(_SetCategory event, Emitter<HomePageState> emit) {
+    emit(state.copyWith(selectedCategory: event.category));
   }
 }

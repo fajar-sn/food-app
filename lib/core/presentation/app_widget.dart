@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/infrastructure/core_repository.dart';
 import 'package:food_app/core/presentation/theme/colors.dart';
+import 'package:food_app/home/presentation/home_page.dart';
 
 class AppWidget extends StatelessWidget {
-  final _repository = CoreRepository();
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,24 +11,17 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         colorScheme: const ColorScheme.light(primary: FoodAppColor.primary),
       ),
-      home: Scaffold(
-        body: Center(
-          child: FutureBuilder(
-            future: _repository.get(endPoint: "list.php?c=list"),
-            builder: (context, snapshot) {
-              if (!snapshot.hasData && !snapshot.hasError) {
-                return const CircularProgressIndicator();
-              }
-
-              if (snapshot.hasError) {
-                return Text("${snapshot.error}");
-              }
-
-              return Text(snapshot.data ?? "");
-            },
-          ),
-        ),
-      ),
+      initialRoute: HomePage.routeName,
+      onGenerateRoute: _generateRoute,
     );
+  }
+
+  Route? _generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case HomePage.routeName:
+        return MaterialPageRoute(builder: (_) => const HomePage());
+    }
+
+    return null;
   }
 }

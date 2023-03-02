@@ -19,32 +19,38 @@ mixin _$HomePageEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategoriesStarted,
+    required TResult Function(String category) setCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategoriesStarted,
+    TResult? Function(String category)? setCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategoriesStarted,
+    TResult Function(String category)? setCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
+    required TResult Function(_SetCategory value) setCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult? Function(_SetCategory value)? setCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult Function(_SetCategory value)? setCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategoriesStarted,
+    required TResult Function(String category) setCategory,
   }) {
     return getCategoriesStarted();
   }
@@ -115,6 +122,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategoriesStarted,
+    TResult? Function(String category)? setCategory,
   }) {
     return getCategoriesStarted?.call();
   }
@@ -123,6 +131,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategoriesStarted,
+    TResult Function(String category)? setCategory,
     required TResult orElse(),
   }) {
     if (getCategoriesStarted != null) {
@@ -135,6 +144,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
+    required TResult Function(_SetCategory value) setCategory,
   }) {
     return getCategoriesStarted(this);
   }
@@ -143,6 +153,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult? Function(_SetCategory value)? setCategory,
   }) {
     return getCategoriesStarted?.call(this);
   }
@@ -151,6 +162,7 @@ class _$_GetCategoriesStarted implements _GetCategoriesStarted {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult Function(_SetCategory value)? setCategory,
     required TResult orElse(),
   }) {
     if (getCategoriesStarted != null) {
@@ -165,10 +177,145 @@ abstract class _GetCategoriesStarted implements HomePageEvent {
 }
 
 /// @nodoc
+abstract class _$$_SetCategoryCopyWith<$Res> {
+  factory _$$_SetCategoryCopyWith(
+          _$_SetCategory value, $Res Function(_$_SetCategory) then) =
+      __$$_SetCategoryCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String category});
+}
+
+/// @nodoc
+class __$$_SetCategoryCopyWithImpl<$Res>
+    extends _$HomePageEventCopyWithImpl<$Res, _$_SetCategory>
+    implements _$$_SetCategoryCopyWith<$Res> {
+  __$$_SetCategoryCopyWithImpl(
+      _$_SetCategory _value, $Res Function(_$_SetCategory) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$_SetCategory(
+      null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_SetCategory implements _SetCategory {
+  const _$_SetCategory(this.category);
+
+  @override
+  final String category;
+
+  @override
+  String toString() {
+    return 'HomePageEvent.setCategory(category: $category)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SetCategory &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SetCategoryCopyWith<_$_SetCategory> get copyWith =>
+      __$$_SetCategoryCopyWithImpl<_$_SetCategory>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getCategoriesStarted,
+    required TResult Function(String category) setCategory,
+  }) {
+    return setCategory(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getCategoriesStarted,
+    TResult? Function(String category)? setCategory,
+  }) {
+    return setCategory?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getCategoriesStarted,
+    TResult Function(String category)? setCategory,
+    required TResult orElse(),
+  }) {
+    if (setCategory != null) {
+      return setCategory(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetCategoriesStarted value) getCategoriesStarted,
+    required TResult Function(_SetCategory value) setCategory,
+  }) {
+    return setCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult? Function(_SetCategory value)? setCategory,
+  }) {
+    return setCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetCategoriesStarted value)? getCategoriesStarted,
+    TResult Function(_SetCategory value)? setCategory,
+    required TResult orElse(),
+  }) {
+    if (setCategory != null) {
+      return setCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetCategory implements HomePageEvent {
+  const factory _SetCategory(final String category) = _$_SetCategory;
+
+  String get category;
+  @JsonKey(ignore: true)
+  _$$_SetCategoryCopyWith<_$_SetCategory> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomePageState {
   bool get isGetCategoriesLoading => throw _privateConstructorUsedError;
   ApiFailure? get failure => throw _privateConstructorUsedError;
   List<String> get categories => throw _privateConstructorUsedError;
+  String get selectedCategory => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomePageStateCopyWith<HomePageState> get copyWith =>
@@ -184,7 +331,8 @@ abstract class $HomePageStateCopyWith<$Res> {
   $Res call(
       {bool isGetCategoriesLoading,
       ApiFailure? failure,
-      List<String> categories});
+      List<String> categories,
+      String selectedCategory});
 
   $ApiFailureCopyWith<$Res>? get failure;
 }
@@ -205,6 +353,7 @@ class _$HomePageStateCopyWithImpl<$Res, $Val extends HomePageState>
     Object? isGetCategoriesLoading = null,
     Object? failure = freezed,
     Object? categories = null,
+    Object? selectedCategory = null,
   }) {
     return _then(_value.copyWith(
       isGetCategoriesLoading: null == isGetCategoriesLoading
@@ -219,6 +368,10 @@ class _$HomePageStateCopyWithImpl<$Res, $Val extends HomePageState>
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedCategory: null == selectedCategory
+          ? _value.selectedCategory
+          : selectedCategory // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -246,7 +399,8 @@ abstract class _$$_HomePageStateCopyWith<$Res>
   $Res call(
       {bool isGetCategoriesLoading,
       ApiFailure? failure,
-      List<String> categories});
+      List<String> categories,
+      String selectedCategory});
 
   @override
   $ApiFailureCopyWith<$Res>? get failure;
@@ -266,6 +420,7 @@ class __$$_HomePageStateCopyWithImpl<$Res>
     Object? isGetCategoriesLoading = null,
     Object? failure = freezed,
     Object? categories = null,
+    Object? selectedCategory = null,
   }) {
     return _then(_$_HomePageState(
       isGetCategoriesLoading: null == isGetCategoriesLoading
@@ -280,6 +435,10 @@ class __$$_HomePageStateCopyWithImpl<$Res>
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedCategory: null == selectedCategory
+          ? _value.selectedCategory
+          : selectedCategory // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -290,7 +449,8 @@ class _$_HomePageState implements _HomePageState {
   const _$_HomePageState(
       {required this.isGetCategoriesLoading,
       required this.failure,
-      required final List<String> categories})
+      required final List<String> categories,
+      required this.selectedCategory})
       : _categories = categories;
 
   @override
@@ -306,8 +466,11 @@ class _$_HomePageState implements _HomePageState {
   }
 
   @override
+  final String selectedCategory;
+
+  @override
   String toString() {
-    return 'HomePageState(isGetCategoriesLoading: $isGetCategoriesLoading, failure: $failure, categories: $categories)';
+    return 'HomePageState(isGetCategoriesLoading: $isGetCategoriesLoading, failure: $failure, categories: $categories, selectedCategory: $selectedCategory)';
   }
 
   @override
@@ -319,12 +482,14 @@ class _$_HomePageState implements _HomePageState {
                 other.isGetCategoriesLoading == isGetCategoriesLoading) &&
             (identical(other.failure, failure) || other.failure == failure) &&
             const DeepCollectionEquality()
-                .equals(other._categories, _categories));
+                .equals(other._categories, _categories) &&
+            (identical(other.selectedCategory, selectedCategory) ||
+                other.selectedCategory == selectedCategory));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, isGetCategoriesLoading, failure,
-      const DeepCollectionEquality().hash(_categories));
+      const DeepCollectionEquality().hash(_categories), selectedCategory);
 
   @JsonKey(ignore: true)
   @override
@@ -337,7 +502,8 @@ abstract class _HomePageState implements HomePageState {
   const factory _HomePageState(
       {required final bool isGetCategoriesLoading,
       required final ApiFailure? failure,
-      required final List<String> categories}) = _$_HomePageState;
+      required final List<String> categories,
+      required final String selectedCategory}) = _$_HomePageState;
 
   @override
   bool get isGetCategoriesLoading;
@@ -345,6 +511,8 @@ abstract class _HomePageState implements HomePageState {
   ApiFailure? get failure;
   @override
   List<String> get categories;
+  @override
+  String get selectedCategory;
   @override
   @JsonKey(ignore: true)
   _$$_HomePageStateCopyWith<_$_HomePageState> get copyWith =>

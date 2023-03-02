@@ -6,6 +6,7 @@ class HomePageState with _$HomePageState {
     required bool isGetCategoriesLoading,
     required ApiFailure? failure,
     required List<String> categories,
+    required String selectedCategory,
   }) = _HomePageState;
 
   factory HomePageState.initial() {
@@ -13,6 +14,7 @@ class HomePageState with _$HomePageState {
       isGetCategoriesLoading: false,
       failure: null,
       categories: [],
+      selectedCategory: "",
     );
   }
 }
